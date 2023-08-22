@@ -1,0 +1,12 @@
+POST https://localhost:7230/api/Book/19
+
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 17,
+    "name": "costel",
+    "price": 0,
+    "category": "string",
+    "author": "string"
+}
