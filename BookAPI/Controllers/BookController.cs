@@ -1,5 +1,6 @@
 ﻿using BookAPI.Services.BookService;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 
@@ -46,6 +47,17 @@ namespace BookAPI.Controllers
                 return NotFound("Book not found :(");
             return Ok(result);
         }
+
+        [HttpPatch("{id}")]
+        public async Task<ActionResult<Book>> UpdateBookSingleProp(int id, JsonPatchDocument<Book> bookUpdates)
+        {
+            var result = await _bookService.UpdateBookSingleProp(id, bookUpdates);
+
+            if (result is null)
+                return NotFound();
+            return NoContent();
+        }
+
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<List<Book>>> DeleteBook(int id)

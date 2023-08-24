@@ -1,4 +1,7 @@
-﻿namespace BookAPI.Services.BookService
+﻿using Azure;
+using Microsoft.AspNetCore.JsonPatch;
+
+namespace BookAPI.Services.BookService
 {
     public class BookService : IBookService
     {
@@ -50,6 +53,20 @@
             await _context.SaveChangesAsync();
 
             return await _context.Books.ToListAsync();
+        }
+
+        public async Task<Book?> UpdateBookSingleProp(int id, JsonPatchDocument<Book> bookUpdates)
+        {
+            var book = await _context.Books.FindAsync(id);
+
+            if (book is null)
+                return null;
+
+            bookUpdates.ApplyTo(book);
+
+            await _context.SaveChangesAsync();
+
+            return book;
         }
         public async Task<List<Book>?> DeleteBook(int id)
         {

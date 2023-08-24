@@ -152,3 +152,8 @@ E:\Programming\C#\web-api\BookAPI\obj\Debug\net7.0\refint\BookAPI.dll
 E:\Programming\C#\web-api\BookAPI\obj\Debug\net7.0\BookAPI.pdb
 E:\Programming\C#\web-api\BookAPI\obj\Debug\net7.0\BookAPI.genruntimeconfig.cache
 E:\Programming\C#\web-api\BookAPI\obj\Debug\net7.0\ref\BookAPI.dll
+E:\Programming\C#\web-api\BookAPI\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Programming\C#\web-api\BookAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Programming\C#\web-api\BookAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+E:\Programming\C#\web-api\BookAPI\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+E:\Programming\C#\web-api\BookAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Newtonsoft.dll
